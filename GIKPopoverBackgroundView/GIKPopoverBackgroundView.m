@@ -134,7 +134,11 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
     self.popoverBackground.center = self.center;
     self.popoverBackground.bounds = self.bounds;
     
-    self.popoverBackground.image = [self wantsUpOrDownArrow] ? [self upOrDownArrowImage] : [self sideArrowImage];    
+    if (self.arrowDirection == 0) {
+        self.popoverBackground.image = [self noArrowImage];
+    } else {
+        self.popoverBackground.image = [self wantsUpOrDownArrow] ? [self upOrDownArrowImage] : [self sideArrowImage];
+    }
 }
 
 
@@ -156,6 +160,16 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
     }
     
     return [UIBezierPath bezierPathWithRect:pathRect].CGPath;
+}
+
+- (UIImage *)noArrowImage {
+    
+    NSString *imageName;
+    UIEdgeInsets insets;
+    
+    imageName = kArrowNone;
+    insets = kArrowNoneInsets;
+    return [self stretchableImageNamed:imageName insets:insets mirrored:NO];
 }
 
 - (UIImage *)upOrDownArrowImage

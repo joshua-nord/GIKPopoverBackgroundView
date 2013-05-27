@@ -31,6 +31,7 @@ static NSString * const kArrowDownRight  = @"PopoverBackgroundArrowDownRight.png
 static NSString * const kArrowSide       = @"PopoverBackgroundArrowSide.png";
 static NSString * const kArrowSideTop    = @"PopoverBackgroundArrowSideTop.png";
 static NSString * const kArrowSideBottom = @"PopoverBackgroundArrowSideBottom.png";
+static NSString * const kArrowNone       = @"PopoverBackgroundArrowNone.png";
 
 /**
  Content and background insets.
@@ -47,6 +48,7 @@ static const UIEdgeInsets kArrowDownRightInsets     = {23.0,  9.0, 27.0, 42.0};
 static const UIEdgeInsets kArrowSideInsets          = {24.0,  9.0, 47.0, 27.0};
 static const UIEdgeInsets kArrowSideTopInsets       = {43.0,  9.0,  9.0, 27.0};
 static const UIEdgeInsets kArrowSideBottomInsets    = {23.0,  9.0, 43.0, 27.0};
+static const UIEdgeInsets kArrowNoneInsets          = {23.0,  9.0, 27.0, 47.0};
 
 static const CGFloat kSecondHalfBottomInset         = 9.0; // Value for .bottom inset in the second half of a two-part vertical stretch operation.
 static const CGFloat kSecondHalfRightInset          = 9.0; // Value for .right inset in the seconf half of a two-part horizontal stretch operation.

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28F5CC141753C5D20013962F /* PopoverBackgroundArrowNone.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F5CC121753C5D20013962F /* PopoverBackgroundArrowNone.png */; };
+		28F5CC151753C5D20013962F /* PopoverBackgroundArrowNone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F5CC131753C5D20013962F /* PopoverBackgroundArrowNone@2x.png */; };
 		60EE6245169BD75E00BCC23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE6244169BD75E00BCC23D /* UIKit.framework */; };
 		60EE6247169BD75E00BCC23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE6246169BD75E00BCC23D /* Foundation.framework */; };
 		60EE6249169BD75E00BCC23D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE6248169BD75E00BCC23D /* CoreGraphics.framework */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28F5CC121753C5D20013962F /* PopoverBackgroundArrowNone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowNone.png; sourceTree = "<group>"; };
+		28F5CC131753C5D20013962F /* PopoverBackgroundArrowNone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowNone@2x.png"; sourceTree = "<group>"; };
 		60EE6240169BD75E00BCC23D /* GIKPopoverBackgroundView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIKPopoverBackgroundView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EE6244169BD75E00BCC23D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60EE6246169BD75E00BCC23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -166,6 +170,8 @@
 				60EE6287169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png */,
 				60EE6288169BDE2400BCC23D /* PopoverBackgroundArrowDownRight.png */,
 				60EE6289169BDE2400BCC23D /* PopoverBackgroundArrowDownRight@2x.png */,
+				28F5CC121753C5D20013962F /* PopoverBackgroundArrowNone.png */,
+				28F5CC131753C5D20013962F /* PopoverBackgroundArrowNone@2x.png */,
 				60EE628A169BDE2400BCC23D /* PopoverBackgroundArrowSide.png */,
 				60EE628B169BDE2400BCC23D /* PopoverBackgroundArrowSide@2x.png */,
 				60EE628C169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom.png */,
@@ -261,6 +267,8 @@
 				60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */,
 				F86BD86316ED83A400E78040 /* GIKPopoverBackgroundView.podspec in Resources */,
 				F8DD1A111743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd in Resources */,
+				28F5CC141753C5D20013962F /* PopoverBackgroundArrowNone.png in Resources */,
+				28F5CC151753C5D20013962F /* PopoverBackgroundArrowNone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

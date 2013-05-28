@@ -294,7 +294,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 
 - (UIImage *)mirroredImage:(UIImage *)image
 {
-    UIImage *mirror = [UIImage imageWithCGImage:image.CGImage scale:[[UIScreen mainScreen] scale] orientation:UIImageOrientationUpMirrored];
+    UIImage *mirror = [UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationUpMirrored];
     return [self imageFromImageContextWithSourceImage:mirror size:mirror.size];
 }
 

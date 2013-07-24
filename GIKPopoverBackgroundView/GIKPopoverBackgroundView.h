@@ -65,5 +65,8 @@ static const CGFloat kSecondHalfRightInset          = 9.0; // Value for .right i
 + (CGFloat)arrowHeight;
 + (CGFloat)arrowBase;
 + (UIEdgeInsets)contentViewInsets;
++ (void)setContentViewInsets:(UIEdgeInsets)contentViewInsets;
++ (BOOL)wantsDefaultContentAppearance;
++ (void)setWantsDefaultContentAppearance:(BOOL)wantsDefaultContentAppearance;
 
 @end

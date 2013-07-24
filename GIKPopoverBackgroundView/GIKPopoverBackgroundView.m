@@ -33,12 +33,34 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 @synthesize arrowOffset = _arrowOffset;
 @synthesize arrowDirection = _arrowDirection;
 
+static UIEdgeInsets _contentViewInsets;
+static BOOL _wantsDefaultContentAppearance;
+
++ (void)initialize
+{
+    _contentViewInsets = kPopoverEdgeInsets;
+    _wantsDefaultContentAppearance = YES;
+}
 
 #pragma mark - UIPopoverBackgroundView required values
 
 + (UIEdgeInsets)contentViewInsets
 {
-    return kPopoverEdgeInsets;
+    return _contentViewInsets;
+}
+
++ (void)setContentViewInsets:(UIEdgeInsets)contentViewInsets
+{
+    _contentViewInsets = contentViewInsets;
+}
+
++ (BOOL)wantsDefaultContentAppearance
+{
+    return _wantsDefaultContentAppearance;
+}
+
++ (void)setWantsDefaultContentAppearance:(BOOL)wantsDefaultContentAppearance {
+    _wantsDefaultContentAppearance = wantsDefaultContentAppearance;
 }
 
 + (CGFloat)arrowHeight
@@ -114,6 +136,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
         layer.shadowRadius = 20.0;
         layer.shadowOffset = (CGSize){ .width = 0.0, .height = 10.0 };
     }
+    
 }
 
 - (void)layoutSubviews

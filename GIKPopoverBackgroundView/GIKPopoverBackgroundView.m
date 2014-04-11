@@ -257,11 +257,16 @@ static BOOL _wantsDefaultContentAppearance;
 
 - (void)adjustCentersIfNecessary
 {
-     // fix centers of left-pointing popovers so that their shadows are drawn correctly.   
-    if (self.arrowDirection == UIPopoverArrowDirectionLeft)
-    {
-        self.center = (CGPoint){ .x = self.center.x + [GIKPopoverBackgroundView arrowHeight], .y = self.center.y };
-        self.popoverBackground.center = (CGPoint){ .x = self.popoverBackground.center.x - [GIKPopoverBackgroundView arrowHeight], .y = self.popoverBackground.center.y };
+    
+    // in ios7 this code causes the popover to be strangely offset about 20px to the right, the below check will
+    //    prevent it from executing.   this is kind of a cheap/safe way to check for not ios7
+    if(![self respondsToSelector:@selector(removeMotionEffect:)]) {
+         // fix centers of left-pointing popovers so that their shadows are drawn correctly.
+        if (self.arrowDirection == UIPopoverArrowDirectionLeft)
+        {
+            self.center = (CGPoint){ .x = self.center.x + [GIKPopoverBackgroundView arrowHeight], .y = self.center.y };
+            self.popoverBackground.center = (CGPoint){ .x = self.popoverBackground.center.x - [GIKPopoverBackgroundView arrowHeight], .y = self.popoverBackground.center.y };
+        }
     }
 }
 

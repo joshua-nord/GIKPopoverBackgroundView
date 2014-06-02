@@ -154,12 +154,15 @@ static BOOL _wantsDefaultContentAppearance;
     _arrowCenter = [self arrowCenter];
     
     // Because layoutSubviews is called on device rotation, the popoverBackground's center and bounds are reset so that any left arrow adjustments or frame resizing can be recalculated from their initial values.
-    self.popoverBackground.center = self.center;
-    self.popoverBackground.bounds = self.bounds;
-    
     if (self.arrowDirection == 0) {
+        self.popoverBackground.bounds = (CGRect){CGPointZero, self.bounds.size.width, self.bounds.size.height - [GIKPopoverBackgroundView arrowHeight]};
+        self.popoverBackground.center = (CGPoint){CGRectGetMidX(self.popoverBackground.bounds), CGRectGetMidY(self.popoverBackground.bounds)};
+        
         self.popoverBackground.image = [self noArrowImage];
     } else {
+        self.popoverBackground.center = self.center;
+        self.popoverBackground.bounds = self.bounds;
+        
         self.popoverBackground.image = [self wantsUpOrDownArrow] ? [self upOrDownArrowImage] : [self sideArrowImage];
     }
 }
